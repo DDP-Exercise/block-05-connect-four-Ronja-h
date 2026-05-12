@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Connect Four</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="/js/controller.connectfour.js"></script>
+    <script type="module" src="/js/model.connectfour.js"></script>
+    <script type="module" src="/js/view.polished.js"></script>
+
 </head>
 <body>
-    <!--TODO: Build the Markup for your Game. Don't forget to style it in a cascading stylesheet. -->
+<h1>Connect Four</h1>
+<h2 id="status">Player 1, start the game!</h2>
+<div id="game-container">
+<div id="player1">
+    <img src="img/mymelody.png" alt="Player 1" class="player-image">
+</div>
+<div id="board">
 
+    <!-- Row 0 -->
+    <div class="cell" data-row="0" data-col="0"></div>
+    <div class="cell" data-row="0" data-col="1"></div>
+    <div class="cell" data-row="0" data-col="2"></div>
+    <div class="cell" data-row="0" data-col="3"></div>
+    <div class="cell" data-row="0" data-col="4"></div>
+    <div class="cell" data-row="0" data-col="5"></div>
+    <div class="cell" data-row="0" data-col="6"></div>
+
+    <!-- Row 1 -->
+    <div class="cell" data-row="1" data-col="0"></div>
+    <div class="cell" data-row="1" data-col="1"></div>
+    <div class="cell" data-row="1" data-col="2"></div>
+    <div class="cell" data-row="1" data-col="3"></div>
+    <div class="cell" data-row="1" data-col="4"></div>
+    <div class="cell" data-row="1" data-col="5"></div>
+    <div class="cell" data-row="1" data-col="6"></div>
+
+    <!-- Row 2 -->
+    <div class="cell" data-row="2" data-col="0"></div>
+    <div class="cell" data-row="2" data-col="1"></div>
+    <div class="cell" data-row="2" data-col="2"></div>
+    <div class="cell" data-row="2" data-col="3"></div>
+    <div class="cell" data-row="2" data-col="4"></div>
+    <div class="cell" data-row="2" data-col="5"></div>
+    <div class="cell" data-row="2" data-col="6"></div>
+
+    <!-- Row 3 -->
+    <div class="cell" data-row="3" data-col="0"></div>
+    <div class="cell" data-row="3" data-col="1"></div>
+    <div class="cell" data-row="3" data-col="2"></div>
+    <div class="cell" data-row="3" data-col="3"></div>
+    <div class="cell" data-row="3" data-col="4"></div>
+    <div class="cell" data-row="3" data-col="5"></div>
+    <div class="cell" data-row="3" data-col="6"></div>
+
+    <!-- Row 4 -->
+    <div class="cell" data-row="4" data-col="0"></div>
+    <div class="cell" data-row="4" data-col="1"></div>
+    <div class="cell" data-row="4" data-col="2"></div>
+    <div class="cell" data-row="4" data-col="3"></div>
+    <div class="cell" data-row="4" data-col="4"></div>
+    <div class="cell" data-row="4" data-col="5"></div>
+    <div class="cell" data-row="4" data-col="6"></div>
+
+    <!-- Row 5 -->
+    <div class="cell" data-row="5" data-col="0"></div>
+    <div class="cell" data-row="5" data-col="1"></div>
+    <div class="cell" data-row="5" data-col="2"></div>
+    <div class="cell" data-row="5" data-col="3"></div>
+    <div class="cell" data-row="5" data-col="4"></div>
+    <div class="cell" data-row="5" data-col="5"></div>
+    <div class="cell" data-row="5" data-col="6"></div>
+</div>
+<div id ="player2">
+    <img src="img/kuromi2.png" alt="Player 2" class="player-image">
+</div>
+</div>
 </body>
 </html>

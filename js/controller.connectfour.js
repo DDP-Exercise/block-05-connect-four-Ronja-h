@@ -45,3 +45,37 @@
 //      the view (or views, if you decide to make a console-view).
 
 //TODO: Add EventListeners, to forward the user inputs to the model.
+
+import { GAMEMODEL } from "./model.connectfour.js";
+import { GAMEVIEW } from "./view.polished.js";
+
+const CONTROLLER = {
+    init: function () {
+        GAMEVIEW.init();
+        this.clickStoneEvent();
+    },
+    clickStoneEvent: function () {
+        const BOARDELEMENT = document.getElementById("board");
+        BOARDELEMENT.addEventListener("click", (event) => {
+            this.clickBoard(event);
+        });
+    },
+    clickBoard: function (event) {
+        const CLICKEDCELL = event.target.closest(".cell");
+
+        if (CLICKEDCELL === null) {
+            return;
+        }
+        const COLUMNASSTRING = CLICKEDCELL.dataset.col;
+        const COLUMN = Number(COLUMNASSTRING);
+
+        if (COLUMN < 0 || COLUMN > 6) {
+            return;
+        }
+        GAMEMODEL.makeMove(COLUMN);
+    },
+};
+CONTROLLER.init();
+
+
+
