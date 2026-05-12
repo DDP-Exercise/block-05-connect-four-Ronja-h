@@ -1,0 +1,87 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: hotpink;
+}
+
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 10px;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.cell {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stone {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.player1 {
+    background-color: hotpink;
+}
+
+.player2 {
+    background-color: rebeccapurple;
+}
+
+.winning .stone {
+    border: 4px solid #ffffff;
+    box-sizing: border-box;
+}
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+#player1, #player2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+.player-image {
+    width: 250px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+#player1.active, #player2.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#player1.active .player-image,
+#player2.active .player-image {
+    filter: grayscale(0%);
+    drop-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+}
